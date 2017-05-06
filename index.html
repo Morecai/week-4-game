@@ -5,9 +5,9 @@
     <meta charset='UTF-8'>
     <title>Crystal Game</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
         </div>
     </div>
     <div class="container">
-        <div id="rules">
+        <div class="rules">
             <p> You will be given a random number at the start of the game.</p>
             <p> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
             <p> You win the game by matching your total score to the random number. You lose the game if your total score goes above the random number. </p>
@@ -25,50 +25,54 @@
         </div>
     </div>
     <div class="container">
-        <div id="numberToGuess">
-        </div>
+        <h3>Can you match this number? <span id="numberToGuess"></span></h3>
+    </div>
+    <div class="container">
         <div id="scoreBoard">
-            <div id="wins"><h3>Wins: </h3>
-            </div>
-            <div id="losses"><h3>Losses: </h3>
-            </div>
+            <h3>Wins: <span id="wins"></span></h3>
+            <h3>Losses: <span id="losses"></span></h3>
         </div>
+    </div>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-md-2">
                 <div class="thumbnail">
                     <a href="assets/images/red.png" target="_blank">
-                        <img src="assets/images/red.png" alt="red" width="25" height="25">
+                        <img src="assets/images/red.png" alt="crystals" width="25" height="25">
                     </a>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="thumbnail">
                     <a href="assets/images/yellow.png" target="_blank">
-                        <img src="assets/images/yellow.png" alt="yellow" width="25" height="25">
+                        <img src="assets/images/yellow.png" alt="crystals" width="25" height="25">
                     </a>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="thumbnail">
                     <a href="assets/images/orange.png" target="_blank">
-                        <img src="assets/images/orange.png" alt="orange" width="25" height="25">
+                        <img src="assets/images/orange.png" alt="crystals" width="25" height="25">
                     </a>
                 </div>
             </div>
             <div class="col-md-2">
                 <div class="thumbnail">
                     <a href="assets/images/blue.png" target="_blank">
-                        <img src="assets/images/blue.png" alt="blue" width="25" height="25">
+                        <img src="assets/images/blue.png" alt="crystals" width="25" height="25">
                     </a>
                 </div>
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
-    <!-- Adds a link to the JavaScript file. Loaded at the bottom so it waits for the HTML content to display first. If you put this at the top it will crash, because the HTML IDs won't exist yet.-->
-    <script src='assets/javascript/game.js'></script>
+    <div class="container">
+        <h4>Your Current Score: <span id="yourScore"></h4></span>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <!-- Adds a link to the JavaScript file. Loaded at the bottom so it waits for the HTML content to display first. If you put this at the top it will crash, because the HTML IDs won't exist yet.-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <script src='assets/javascript/game.js'></script>
 </body>
 
 </html>
